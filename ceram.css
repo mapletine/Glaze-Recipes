@@ -1,0 +1,145 @@
+body {
+    font-family: "Albert Sans", Comic Sans MS;
+    background-color:#FFFCF7;
+    color: #22223B;
+     }
+
+.header {
+    padding-top: 17%;
+    padding-bottom: 20%;
+    text-align: center;
+    color: #22223B;
+    font-size: 30px;
+    position: sticky;
+    top:10px;
+    z-index:-1;
+    }
+article {
+        background-image: linear-gradient(
+          to bottom,
+          transparent 10px,
+          #FFFCF7 50px,
+          #FFFCF7 calc(100% - 20px),
+          transparent 0
+        );
+        margin: auto auto 50px auto;
+        z-index: 10;
+}
+
+.title {
+    position: -webkit-sticky;
+    position: sticky;
+        top: 0px;
+    background-color:#FFFCF7;
+    padding: 8px 8px 8px 8px;
+    }
+
+.collapsible {
+    background-color: #368F8B;
+    color: #FFFCF7;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 5px;
+    text-align: left;
+    outline: none;
+    font-family: "Albert Sans", Comic Sans MS;
+    font-size: 15px;
+    display: inline-block;
+    }
+.collapsible:after {
+    content: '+'; /* Unicode character for "plus" sign (+) */
+    font-size: 20px;
+    color: #FFFCF7;
+    float: right;
+    opacity: 100%;
+    margin-left: 5px;
+    }
+    .active:after {
+        content: "-"; /* Unicode character for "minus" sign (-) */
+        font-size: 20px;
+        }
+    
+.active, .collapsible:hover {
+    background-color: #2e7e87;
+    }
+  
+.content {
+    padding: 0 18px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color:#ddefee;
+    justify-content: left;
+    }
+
+  input[type=text] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    font-family: Nunito;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 0px;
+    outline: none;
+    }
+
+.parent {
+    margin: 0px 20px 0px 20px;
+    padding: 0px;
+    display: flex;
+    align-items: stretch;
+    }
+.child {
+    flex: 1;
+    margin: 5px;
+    text-align: left;
+}
+.gentext {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #246A73;
+    overflow-x: hidden;
+    transition: 0.5s;
+    top:0;
+    left:0;
+  }
+  
+  .sidenav a {
+    padding: 16px 16px 16px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFFCF7;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: rgb(40, 114, 127);
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" Type="text/css" href="ceram.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <h2 style="color:#F7F7FF">|| menu</h2>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Recipes</a>
+  <a href="#howto-mug">Mug Tutorial</a>
+  <a href="#howto-bowl">Bowl Tutorial</a>
+  <a href="#howto-plate">Plate Tutorial</a>
+  <a href="#faq">faq</a>
+</div>
+<div class="article1">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; navigator</span>
+
+<div class="header">
+    <h1>Throwing Tutorials</h1>
+    <p>created by Olivia Park '23</p>
+</div>
+<article>
+<article>
+<a name="howto-mug"></a>
+<h2 class="title">Mug Tutorial</h2>
+</article>
+<article>
+    <a name="howto-bowl"></a>
+    <h2 class="title">Bowl Tutorial</h2>
+</article>
+<article>
+    <a name="howto-plate"></a>
+    <h2 class="title">Plate Tutorial</h2>
+</article>
+<article>
+    <a name="faq"></a>
+    <h2 class="title">faq</h2>
+</article>
+</article>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+              if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+</body>
+
+
+</html>
